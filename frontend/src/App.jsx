@@ -138,5 +138,30 @@ function App() {
     </AuthProvider>
   );
 }
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import Login from './pages/Login';
+import Register from './pages/Register';
+
+const DashboardPlaceholder = () => (
+  <div style={{padding: '40px'}}>
+    <h2>Student Dashboard (Authentication Verified!)</h2>
+  </div>
+);
+
+function App() {
+  return (
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<DashboardPlaceholder />} />
+          <Route path="*" element={<Navigate to="/login" />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
+  );
+}
 
 export default App
