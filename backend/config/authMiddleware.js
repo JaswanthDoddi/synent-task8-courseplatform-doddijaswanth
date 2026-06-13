@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = require('/models/User');
+const User = require('../models/user');
 
 // Middleware to verify a standard logged-in user via JWT
 exports.protect = async (req, res, next) => {
