@@ -29,3 +29,7 @@ const authRoutes = require('./routes/authRoutes');
 
 // Mount the route middleware right below app.use(express.json());
 app.use('/api/auth', authRoutes);
+const courseRoutes = require('./routes/courseRoutes');
+
+// Mount course management routing middleware
+app.use('/api/courses', courseRoutes);
