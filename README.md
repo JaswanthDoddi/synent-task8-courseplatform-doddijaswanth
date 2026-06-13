@@ -1,0 +1,1 @@
+# Full-Stack Online Course Platform - Synent Technologies Task 8
