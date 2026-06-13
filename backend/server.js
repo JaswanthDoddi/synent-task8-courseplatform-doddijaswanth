@@ -33,3 +33,7 @@ const courseRoutes = require('./routes/courseRoutes');
 
 // Mount course management routing middleware
 app.use('/api/courses', courseRoutes);
+const paymentRoutes = require('./routes/paymentRoutes');
+
+// Mount billing route groups
+app.use('/api/payments', paymentRoutes);
