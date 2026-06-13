@@ -24,3 +24,8 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`🚀 Server actively listening on port ${PORT}`);
 });
+// Add this route import alongside your other imports at the top
+const authRoutes = require('./routes/authRoutes');
+
+// Mount the route middleware right below app.use(express.json());
+app.use('/api/auth', authRoutes);
